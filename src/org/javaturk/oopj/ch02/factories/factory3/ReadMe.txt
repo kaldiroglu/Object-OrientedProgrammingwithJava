@@ -1,0 +1,2 @@
+Bu örnek, Employee-Manager-Director kalıtım hiyerarşisinde super() çağrılarını varsayılan kurucular yapıoldığında kodun naısl olacağını gösterir.
+Buradaki en temel problem aynı kodların farklı kuruculara dağılmasıdır.

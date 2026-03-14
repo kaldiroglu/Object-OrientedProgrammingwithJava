@@ -1,0 +1,17 @@
+package org.javaturk.oopj.ch04.sealing.shape;
+
+public class FilledSquare extends Square {
+
+	private String color;
+
+	public FilledSquare(String name, double size, String color) {
+		super(name, size);
+		this.color = color;
+	}
+	
+	@Override
+	public void draw() {
+		System.out.println("Drawing a square and filling it with " + color);		
+	}
+
+}

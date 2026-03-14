@@ -1,0 +1,11 @@
+
+package org.javaturk.oopj.ch10.math.calculator3;
+
+/**
+ * @author akin
+ *
+ */
+public interface SingleArgMathFunction extends MathFunction {
+	
+	public double calculate(double arg);
+}
