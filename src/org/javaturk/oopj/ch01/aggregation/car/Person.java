@@ -15,7 +15,11 @@ public class Person {
 	
 	// Car of the person
 	Car vehicle;
-	
+
+	public Person(){
+
+	}
+
 	public String getInfo(){
 		String info = "Person Info: " + tckn + " " + firstName + " " + lastName;
 		if( vehicle != null)

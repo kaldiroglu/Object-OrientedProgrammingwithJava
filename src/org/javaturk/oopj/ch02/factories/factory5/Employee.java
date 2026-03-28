@@ -1,4 +1,4 @@
-package org.javaturk.oopj.ch02.factories.factory3;
+package org.javaturk.oopj.ch02.factories.factory5;
 
 public class Employee {
 	protected int no;
@@ -8,16 +8,21 @@ public class Employee {
 
 	public static final int BASE_SALARY = 500;
 
-	public Employee(){
-
+	public Employee(int no, String name, int year) {
+		if(name == null || name.isEmpty())
+			throw new IllegalArgumentException("Name cannot be null or empty");
+		this(no, name, year, "No Department");
 	}
 
 	public Employee(int no, String name, int year, String department) {
+		if(name == null || name.isEmpty())
+			throw new IllegalArgumentException("Name cannot be null or empty");
+		if(department == null || department.isEmpty())
+			department = "No Department";
 		this.no = no;
 		this.name = name;
 		this.year = year;
 		this.department = department;
-		System.out.println("in Employee()");
 	}
 
 	public void work() {

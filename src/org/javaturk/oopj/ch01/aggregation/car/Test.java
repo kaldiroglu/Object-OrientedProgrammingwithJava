@@ -19,7 +19,7 @@ public class Test {
 		Car mercedes = new Car();
 		mercedes.make = "Mercedes";
 		mercedes.model = "E200";
-		mercedes.year = "2011";
+		mercedes.year = "2019";
 		mercedes.speed = 80;
 		mercedes.distance = 130_000;
 		
@@ -97,6 +97,5 @@ public class Test {
 		System.out.println(zeynep.getInfo());
 		
 //		System.out.println(zeynep.vehicle.model);
-		
 	}
 }

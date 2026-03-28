@@ -11,17 +11,17 @@ import org.javaturk.oopj.ch02.access.aPackage.Parent2;
  * @see <a href="http://www.selsoft.com.tr">http://www.selsoft.com.tr</a>
  *      </p>
  */
-public class Child extends Parent2{
+public class Child extends Parent1{
 	
 	public void printInfo() {
 		System.out.println("Child Info");
 		System.out.println("x: " + x);
-//		System.out.println("y: " + y); // Only when they are in the same package.
+		System.out.println("y: " + y); // Only when they are in the same package.
 		System.out.println("t: " + t); // It is accessible because it is inherited.
 //		System.out.println("z: " + z); // Never!
 
 		f();
-//		g(); // Only when they are in the same package
+		g(); // Only when they are in the same package
 		u(); // It is accessible because it is inherited.
 //		v(); // Never!
 	}

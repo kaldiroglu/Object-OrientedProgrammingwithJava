@@ -53,6 +53,7 @@ public class Car {
 	}
 
 	public void go(int newDistance) {
+		engine.start();
 		for (Door door : doors) {
 			if (!door.isClosed())
 				door.close();
@@ -60,6 +61,7 @@ public class Car {
 		System.out.println("Car is moving.");
 		distance += newDistance;
 		System.out.println("Distance: " + distance);
+		engine.stop();
 	}
 
 	public void accelerate(int newSpeed) {

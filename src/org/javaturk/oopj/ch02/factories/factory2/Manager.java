@@ -20,7 +20,7 @@ public class Manager extends Employee {
 //        this.name = name;
 //        this.year = year;
 //        this.department = workingDepartment;
-        this.departmentManaged = departmentManaged;
+//        this.departmentManaged = departmentManaged;
         System.out.println("in Manager()");
     }
 }

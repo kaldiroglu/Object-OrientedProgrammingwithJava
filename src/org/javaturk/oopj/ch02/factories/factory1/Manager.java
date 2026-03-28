@@ -1,5 +1,7 @@
 package org.javaturk.oopj.ch02.factories.factory1;
 
+import org.javaturk.oopj.ch02.access.Parent1;
+
 /**
  * @author <a href="mailto:akin@javaturk.org">Akin Kaldiroglu</a>
  *         <p>

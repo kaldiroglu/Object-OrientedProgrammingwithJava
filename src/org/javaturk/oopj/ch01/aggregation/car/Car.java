@@ -17,6 +17,10 @@ public class Car {
 	
 	// Owner of the car
 	Person owner;
+
+	public Car(){
+
+	}
 	
 	public void go(int newDistance){
 		distance += newDistance;
