@@ -7,11 +7,11 @@ import org.javaturk.oopj.ch07.factory.hr.HR;
 public class InstanceofPatternMatching {
 
 	public static void main(String[] args) {
-//		run1();
+		run1();
 //		scope1();
 //		scope2();
-//		scope3()
-//		weirdScopeExample();
+//		scope3();
+//		weirdScope();
 	}
 	
 	static void run1() {
@@ -53,12 +53,12 @@ public class InstanceofPatternMatching {
 		System.out.println();
 
 //		Can't do that!'
-//		boolean b = e1 instanceof Director d1;
-//
-//		if (b) {
-//			System.out.println("Instance of Director");
+		boolean b = e1 instanceof Director d1;
+
+		if (b) {
+			System.out.println("Instance of Director");
 //			d1.makeStrategicPlan();
-//		}
+		}
 	}
 
 	static void scope1() {
@@ -79,7 +79,7 @@ public class InstanceofPatternMatching {
 	static void scope2() {
 		Employee e = new Director(4, "Mehmet", 20, "Management", "Management", 3000);
 
-		if (!(e instanceof Director d)) { // The scope of a pattern variable are the places where the program can reach only if the instanceof operator is true
+		if (!(e instanceof Director d)) { // The scope of a pattern variable is the places where the program can reach only if the instanceof operator is true
 			System.out.println("Not an instance of Director");
 //			d.makeStrategicPlan(); // Can't reach d here!
 		} else  {
@@ -92,8 +92,8 @@ public class InstanceofPatternMatching {
 	}
 
 	/**
-	 * This used to be problem probably in JDK 14 or 15 and then suddenly it started working. JDK 21 has no problems with that.
-	 * Probably when this feature was becoming mature and finalized this was not seen as a problem
+	 * This used to be a problem probably in JDK 14 or 15 and then suddenly it started working. JDK 21 has no problems with that.
+	 * Probably when this feature was becoming mature and finalized, this was not seen as a problem
 	 * anymore and started to be accepted as a valid code.
 	 */
 	static void run2() {
@@ -116,15 +116,23 @@ public class InstanceofPatternMatching {
 	}
 
 
+	/**
+	 * - Since e1 is a Director, condition is false, so if block is skipped.
+	 * - Because the if block has return (or throw), Java knows:
+	 *     if execution reaches the next line, the pattern must have matched.
+	 * - So d is valid after the if, and d.makeStrategicPlan() compiles.
+	 * If you remove return (and no else), Java can no longer guarantee that d exists after the if, so d.makeStrategicPlan() fails to compile.
+	 * If you use else, d is in scope inside else, because else means the match was true.
+	 */
 	static void weirdScope() {
 		Employee e1 = new Director(4, "Mehmet", 20, "Management", "Management", 3000);
-		if (!(e1 instanceof Director d)) { // e1 instanceof Director is true so !(e1 instanceof Director d) is false then flow doesn't go into if block!
+		if (!(e1 instanceof Director d)) { // "e1 instanceof Director" is true, so "!(e1 instanceof Director d)" is false, then flow doesn't go into if block!
 			System.out.println("Not an instance of Director");
 //			d.makeStrategicPlan();
 			return; // remove return and see what happens!
 //			throw new IllegalArgumentException();  // remove return and see what happens!
-		}
-
-		d.makeStrategicPlan();
+		} // Remove return above and open following else block!
+//		else
+			d.makeStrategicPlan();
 	}
 }

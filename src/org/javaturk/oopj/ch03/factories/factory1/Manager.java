@@ -12,7 +12,7 @@ public class Manager extends Employee{
 	
 	protected String departmentManaged;
 	
-	public static final int MANAGEMENT_PAYMENT = 20_000;
+	public static final int MANAGEMENT_PAYMENT = 50_000;
 
 	public Manager(int no, String name, int year, String workingDepartment, String departmentManaged){
 		super(no, name, year, workingDepartment);
@@ -44,13 +44,13 @@ public class Manager extends Employee{
 //		return year * BASE_SALARY + MANAGEMENT_PAYMENT;
 //	}
 	
-//	@Override
-//	public void printInfo(){
-//		System.out.println("Manager Info");
-//		System.out.println("\nNo: " + no);
-//		System.out.println("Name:" + name);
-//		System.out.println("Year: " + year);
-//		System.out.println("Department: " + department);
-//		System.out.println("Managing Department: " + departmentManaged);
-//	}
+	@Override
+	public void printInfo(){
+		System.out.println("Manager Info");
+		System.out.println("\nNo: " + no);
+		System.out.println("Name:" + name);
+		System.out.println("Year: " + year);
+		System.out.println("Department: " + department);
+		System.out.println("Managing Department: " + departmentManaged);
+	}
 }

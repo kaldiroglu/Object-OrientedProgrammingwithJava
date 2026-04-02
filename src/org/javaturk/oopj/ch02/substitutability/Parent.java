@@ -17,7 +17,7 @@ public class Parent {
 		System.out.println("f() in Parent");
 	}
 	
-	public void g() {
+	 void g() {
 		System.out.println("g() in Parent");
 	}
 }

@@ -14,7 +14,7 @@ public class Employee {
 	protected int year;
 	protected String department;
 	
-	public static final int BASE_SALARY = 1000;
+	public static final int BASE_SALARY = 5_000;
 	
 	public Employee(int no, String name, int year, String department){
 		this.no = no;
@@ -32,7 +32,7 @@ public class Employee {
 //	}
 
 	public double calculateSalary(){
-		return year * BASE_SALARY;
+		return year * BASE_SALARY * 1.1;
 	}
 	
 	public void printInfo()

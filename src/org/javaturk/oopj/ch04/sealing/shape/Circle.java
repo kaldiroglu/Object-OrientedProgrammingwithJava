@@ -1,6 +1,6 @@
 package org.javaturk.oopj.ch04.sealing.shape;
 
-public final class Circle extends Shape {
+public final class Circle extends Shape  {
     private double r;
 
     public Circle(String name, double r) {
@@ -8,7 +8,7 @@ public final class Circle extends Shape {
         this.r = r;
     }
 
-    @Override
+//    @Override
     public void draw() {
         System.out.println("Drawing a circle.");
     }

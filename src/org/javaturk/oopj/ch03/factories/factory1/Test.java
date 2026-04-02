@@ -11,7 +11,7 @@ public class Test {
 		System.out.println();
 		
 		Manager m1 = new Manager(2, "Fatma", 3, "Production", "Production");
-//		m1.printInfo();
+		m1.printInfo();
 		System.out.println("Salary: " + m1.calculateSalary());
 //		System.out.println("Maaşı: " + m1.calculateSalaryForManager());
 //		m1.work();
@@ -19,7 +19,7 @@ public class Test {
 		
 		System.out.println();
 
-		Director d1 = new Director(4, "Mehmet", 10, "Management", "Management", 50_000);
+		Director d1 = new Director(4, "Mehmet", 1, "Management", "Management", 50_000);
 		d1.printInfo();
 		System.out.println("Salary: " + d1.calculateSalary());
 //		System.out.println("Maaşı: " + d1.calculateSalaryForManager());

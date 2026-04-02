@@ -18,3 +18,7 @@ This is the list of topics for packages under org.javaturk.oopj:
 * 16: Map Family
 * 17: Algorithms, Properties and Other Collection Libraries
 * util: Includes only ScannerUtil class
+
+This repo works with JDK 25. Only one class, org.javaturk.oopj.ch07.factory.downcast.PatternMatchingWithPrimitives needs JDK 26.
+
+Contact me for any questions at akin@kaldiroglu.dev or at https://www.linkedin.com/in/akin-kaldiroglu/

@@ -10,14 +10,15 @@ import java.time.temporal.Temporal;
 public class SwitchPatternMatching {
 
     public static void main(String[] args) {
-        run1();
+//        run1();
 //        run2();
-//        run3();
+        run3();
 //        run4();
     }
 
     public static void run1() {
-        Object object = null; //new ObjectFactory().createObject();
+        Object object = new ObjectFactory().createObject();
+//        Object object = null;
 
         switch (object) {
             case null -> System.out.println("Null");
@@ -37,7 +38,7 @@ public class SwitchPatternMatching {
         switch (employee) {
             case Director d1 -> d1.makeStrategicPlan();
             case Manager m -> m.manage();
-//            case Manager m1 -> m1.manage(); /7 Error!
+//            case Manager m1 -> m1.manage(); // Error! The upper line catches Manager type!
             case Secretary s -> s.serve();
             case Engineer e -> e.assignTask("A new task.");
 //            default -> employee.work();
