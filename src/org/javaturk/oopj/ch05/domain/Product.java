@@ -28,8 +28,8 @@ public class Product {
     public boolean equals(Object o) {
         Product p1 = (Product) o;
         boolean b = false;
-//        if (no == p1.no & price == p1.price & name.toLowerCase().equals(p1.name.toLowerCase()))
-        if (no == p1.no)
+        if (no == p1.no & price == p1.price & name.toLowerCase().equals(p1.name.toLowerCase()))
+//        if (no == p1.no)
             b = true;
         return b;
     }
@@ -43,6 +43,7 @@ public class Product {
 //		return b;
 //	}
 
+    @Override
     public int hashCode() {
         return no + (int) price + name.toLowerCase().hashCode();
     }

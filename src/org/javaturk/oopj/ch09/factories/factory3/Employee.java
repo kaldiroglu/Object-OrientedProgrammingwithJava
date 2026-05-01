@@ -1,6 +1,6 @@
 package org.javaturk.oopj.ch09.factories.factory3;
 
-public class Employee implements Worker{
+public class Employee implements Worker, Comparable{
 	protected int no;
 	protected String name;
 	protected int year;
@@ -75,5 +75,23 @@ public class Employee implements Worker{
 		return year * BASE_SALARY ;
 	}
 
+	@Override
+	public int compareTo(Object o) {
+		Employee e = (Employee) o;
+		if(no < e.no)
+			return -1;
+		else if(no == e.no)
+			return 0;
+		else return 1;
+	}
 
+//	@Override
+//	public int compareTo(Object o) {
+//		Employee e = (Employee) o;
+//		if(no < e.no)
+//			return no - e.no;
+//		else if(no == e.no)
+//			return 0;
+//		else return no - e.no;
+//	}
 }

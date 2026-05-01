@@ -54,16 +54,16 @@ public class Employee extends Person implements Worker, Schedulable{
 	}
 
 	@Override
+	public void work() {
+		System.out.println("Employee is working!");
+
+	}
+
+	@Override
 	public String toString() {
 		return "Employee [no=" + no + ", name=" + name + ", year=" + year + ", department=" + department + "]";
 	}
 
-	
-	@Override
-	public void work() {
-		System.out.println("Employee is working!");
-		
-	}
 	
 	public double calculateSalary(){
 		return year * BASE_SALARY ;

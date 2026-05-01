@@ -4,7 +4,7 @@ package org.javaturk.oopj.ch06.factory.domain;
 public class Manager extends Employee{
 	protected String departmentManaged;
 	
-	public static final int MANAGEMENT_PAYMENT = 3000;
+	public static final int MANAGEMENT_PAYMENT = 50_000;
 	
 	public Manager(int no, String name, int year, String workingDepartment, String departmentManaged){
 		super(no, name, year, workingDepartment);

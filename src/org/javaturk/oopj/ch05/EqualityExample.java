@@ -15,7 +15,7 @@ public class EqualityExample {
 	public static void main(String[] args) {
 		Object o ;
 
-		Product p1 = new Product(11, "KAN EPE", 170.99);
+		Product p1 = new Product(11, "Kanepe", 171.99);
 		Product p2 = new Product(11, "Kanepe", 171.99);
 		
 //		p1 = p2;

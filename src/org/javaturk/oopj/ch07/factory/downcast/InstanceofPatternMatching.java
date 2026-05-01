@@ -7,7 +7,7 @@ import org.javaturk.oopj.ch07.factory.hr.HR;
 public class InstanceofPatternMatching {
 
 	public static void main(String[] args) {
-		run1();
+//		run1();
 //		scope1();
 //		scope2();
 //		scope3();

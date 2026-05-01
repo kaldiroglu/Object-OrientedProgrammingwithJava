@@ -1,6 +1,6 @@
 package org.javaturk.oopj.ch08.factory;
 
-public abstract class  Employee{
+public abstract class Employee{
 	protected int no;
 	protected String name;
 	protected int year;

@@ -9,7 +9,8 @@ public class InstanceofExample {
 //		 run1();
 //        run2();
 //        run3();
-        run4();
+//        run4();
+//        run5();
     }
 
     /**
@@ -58,8 +59,8 @@ public class InstanceofExample {
         // Do not use instanceof in if-else statements starting from most generic type!
         if (e1 instanceof Employee)
             e1.work();
-         else if (e1 instanceof Manager) {
-			Manager m1 = (Manager) e1;
+        else if (e1 instanceof Manager) {
+            Manager m1 = (Manager) e1;
             m1.manage();
         } else if (e1 instanceof Director) {
             Director d1 = (Director) e1;
@@ -88,10 +89,21 @@ public class InstanceofExample {
             System.out.println("Not an instance of Employee!");
     }
 
+    public static void run4() {
+        HR hr = new HR();
+        Employee e1 = hr.getAnEmployee();
+        if (e1 instanceof Director) {
+            System.out.println("Instance of Director");
+            Director d1 = (Director) e1;
+            d1.makeStrategicPlan();
+        } else
+            System.out.println("Not an instance of Director!");
+    }
+
     /**
      * Use of null reference in instanceof in if-else if statement
      */
-    public static void run4() {
+    public static void run5() {
         Employee e1 = null;
 
         if (e1 instanceof Director) {

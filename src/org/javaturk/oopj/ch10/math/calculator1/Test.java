@@ -22,7 +22,7 @@ public class Test {
 		calculator2.addFunction(new LogFunction());
 		calculator2.addFunction(new FactorialFunction());
 		calculator2.addFunction(new SquaredFunction());
-//		calculator2.listMathFunction();
+		calculator2.listMathFunction();
 
 		startCalculator(calculator2);
 	}

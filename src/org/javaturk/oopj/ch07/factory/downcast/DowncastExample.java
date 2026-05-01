@@ -8,7 +8,7 @@ public class DowncastExample {
 	public static void main(String[] args) {
 //		impossibleDowncast();
 //		downcast1();
-//		downcast2();
+		downcast2();
 //		nullDowncast();
 	}
 

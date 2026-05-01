@@ -12,8 +12,8 @@ public class Test {
 		w.work();
 //		w.calculateSalary(); // can't do that!
 		
-		youWork(w);
-		youWork(new Employee(2, "Zeynep", 14, "Production"));
+		workHard(w);
+		workHard(new Employee(2, "Zeynep", 14, "Production"));
 		
 		if(w instanceof Employee) {
 			System.out.println("\nIt is an Employee");
@@ -28,13 +28,13 @@ public class Test {
 
 		w = new Manager(5, "İsmail", 14, "Production", "Production");
 		w.work();
-		youWork(w);
+		workHard(w);
 		
 		Manager m = (Manager) w;
 		m.manage();
 
 		Boss boss = new Boss();
-		youWork(boss);
+		workHard(boss);
 
 		if (boss instanceof Worker) {
 			System.out.println("true");
@@ -43,7 +43,7 @@ public class Test {
 		}
 	}
 	
-	public static void youWork(Worker worker) {
+	public static void workHard(Worker worker) {
 		System.out.println("\nIn youWork()");
 		worker.work();
 	}

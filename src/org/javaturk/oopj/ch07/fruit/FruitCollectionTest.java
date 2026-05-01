@@ -17,7 +17,7 @@ public class FruitCollectionTest {
 		Fruit f = coll.get(0);
 		f.eat();
 //		f.cut();
-//		System.out.println(o.toString());
+//		System.out.println(f.toString());
 
 //		Melon m = f;
 		Melon m = (Melon) f;   // Isn’t this risky? Are you sure it is a melon?
