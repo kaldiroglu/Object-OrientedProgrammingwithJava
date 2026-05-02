@@ -8,9 +8,6 @@ import java.util.List;
 
 /**
  * Java SE Tutorial example.
- * 
- * @author akin
- *
  */
 public class CleanUpWithFinally {
 
@@ -19,7 +16,7 @@ public class CleanUpWithFinally {
 
 	public static void main(String[] args) {
 		populateList();
-		writeList2();
+		writeList1();
 	}
 
 	private static void populateList() {
@@ -38,8 +35,8 @@ public class CleanUpWithFinally {
 				if(i == 18)
 					throw new IOException("Just trying something :)");
 			}
-//			out.close();
-//			out = null;
+			out.close();
+			out = null;
 		} catch (IOException e) {
 			System.out.println("Problem when writing out to the file: " + e.getMessage());
 		} finally { // For clean up!
@@ -54,7 +51,6 @@ public class CleanUpWithFinally {
 	}
 	
 	public static void writeList2() {
-		//PrintWriter out = null;
 		System.out.println("Entered try statement");
 		try (PrintWriter out = new PrintWriter(new FileWriter("/Users/akin/Desktop/OutFile.txt"));){
 			for (int i = 0; i < SIZE; i++) {

@@ -15,7 +15,7 @@ public class ClosableExample {
             System.out.println("in try block.");
             throwException();
             System.out.println("Closing cc in try!");
-//			cc.close();
+			cc.close();
         } catch (IOException e) {
             System.out.println("in catch block.");
 //			try {

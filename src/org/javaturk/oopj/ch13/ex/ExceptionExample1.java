@@ -17,8 +17,8 @@ public class ExceptionExample1 {
         String path = ScannerUtil.read("Please enter the path of the file to open:");
         File file = new File(path);
 //		openFile(file);
-//        openWriteAndCloseFile(file);
-		openReadAndCloseFile(file);
+        openWriteAndCloseFile(file);
+//		openReadAndCloseFile(file);
         System.out.println("End of main.");
     }
 
@@ -49,7 +49,7 @@ public class ExceptionExample1 {
     private static void openWriteAndCloseFile(File file) {
         try {
             // Open the file to write
-            OutputStream out = new FileOutputStream(file); // FileNotFoundException
+            OutputStream out = new FileOutputStream(file, true); // FileNotFoundException is not thrown!
             System.out.println("File opened!");
 
             // Write date and some string into the file
@@ -67,6 +67,7 @@ public class ExceptionExample1 {
             // And the close it.
             out.close();
             System.out.println("File closed!");
+//            out.write(bytes2);
         } catch (FileNotFoundException e) {
             System.out.println("FileNotFoundException");
             System.out.println("Problem with opening the file: " + file);
@@ -76,7 +77,7 @@ public class ExceptionExample1 {
             System.out.println("IOException");
             System.out.println("Problem with the file: " + file);
             System.out.println("Message: " + e.getMessage());
-            // e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
@@ -100,13 +101,13 @@ public class ExceptionExample1 {
 //			BufferedReader reader = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
 //			String line;
 //			while((line = reader.readLine()) != null){
-//				System.out.print(line);
+//				System.out.println(line);
 //			}
 
             in.close();
             System.out.println("\nFile closed!");
             // Trying to read after the stream is closed.
-            in.read();
+//            in.read();
 //			reader.readLine();
         } catch (FileNotFoundException e) {
             System.out.println("FileNotFoundException");

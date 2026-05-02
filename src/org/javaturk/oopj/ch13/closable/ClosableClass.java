@@ -14,7 +14,6 @@ public class ClosableClass implements AutoCloseable{
 			System.out.println("Throwing a IOException!");
 			throw new IOException();
 		}
-
 		open = true;
 	}
 

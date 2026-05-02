@@ -21,11 +21,12 @@ public class FinallyExample2 {
         }
         catch(IOException e){
             i++;
-            System.out.println("in catch()");
+            System.out.println("i in catch(): " + i);
             return i;
         }
         finally{
             // Runs before returning i otherwise i.e. if finally run after returning i it would have lost the value of i.
+            i++;
             System.out.println("in finally and i: " + i);
         }
     }

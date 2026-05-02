@@ -9,7 +9,7 @@ public class ShapeFactory {
 	public static Shape produceShape() {
 		Shape shape = null;
 		
-		int i = Math.abs(random.nextInt() % 100);
+		int i = Math.abs(random.nextInt() % 100); // Make sure that i can't be negative
 		if(i < 50)
 			shape = new Circle(i);
 		else

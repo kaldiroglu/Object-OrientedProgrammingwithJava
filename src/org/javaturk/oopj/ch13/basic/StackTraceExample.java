@@ -14,9 +14,9 @@ public class StackTraceExample {
 	private void doThat() {
 		Throwable throwable = new Throwable("Just kidding :)");
 //		throw throwable;
-		throwable.printStackTrace();
-		System.out.println();
-		printStackTraceForThrowable(throwable);
+//		throwable.printStackTrace();
+//		System.out.println();
+//		printStackTraceForThrowable(throwable);
 	}
 
 	public void printStackTraceForThrowable(Throwable throwable) {

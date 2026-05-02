@@ -1,6 +1,6 @@
 package org.javaturk.oopj.ch13.runtime.shape1;
 
-public class NegativeArgumentException extends RuntimeException {
+public class NegativeArgumentException extends Exception {
 	private double argument;
 	
 //	private static String message = "";

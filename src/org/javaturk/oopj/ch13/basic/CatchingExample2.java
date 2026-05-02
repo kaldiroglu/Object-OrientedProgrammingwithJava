@@ -17,11 +17,11 @@ public class CatchingExample2 {
     private static void doSomethingElse() {
         try {
             throwThrowable();
-            System.out.println("After throwThrowable()1!");
+            System.out.println("After throwThrowable()-1!");
         } catch (Throwable e) {
             System.out.println("Catching a Throwable: " + e.getMessage());
         }
-        System.out.println("After throwThrowable()2!");
+        System.out.println("After throwThrowable()-2!");
     }
 
     public static void throwThrowable() throws Throwable {

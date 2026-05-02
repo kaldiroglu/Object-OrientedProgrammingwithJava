@@ -8,11 +8,11 @@ public class CatchingExample1 {
 	public static void main(String[] args) {
 		try {
 			doSomething();
-			System.out.println("After doSomething()1!");
+			System.out.println("After doSomething()-1!");
 		} catch (Throwable e) {
 			System.out.println("Catching a Throwable: " + e.getMessage());
 		}
-		System.out.println("After doSomething()2!");
+		System.out.println("After doSomething()-2!");
 	}
 
 	private static void doSomething() throws Throwable { // No need for throws
@@ -29,6 +29,7 @@ public class CatchingExample1 {
 			System.out.println("I have a problem while I am doing my work :(. Random: " + random);
 			Throwable throwable = new Throwable("Just kidding!");
 			throw throwable;
+//			System.out.println("I am not here!");  // Error: Unreachable statement!
 		} else
 			System.out.println("I am doing my work without any problem at all :)");
 	}

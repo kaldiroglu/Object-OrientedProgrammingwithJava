@@ -23,7 +23,7 @@ public class ExceptionExample3 {
     }
 
     private static void openReadAndCloseFile(File file) throws IOException, FileNotFoundException {
-        InputStream in = new FileInputStream(file); // FileNotFoundException
+        InputStream in = new FileInputStream(file); // FileNotFoundException might be thorwn
         System.out.println("File opened!");
         int availableByteCount = in.available();
         System.out.println("Available byte count to read: " + availableByteCount);

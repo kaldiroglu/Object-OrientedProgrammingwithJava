@@ -16,10 +16,10 @@ public class ClosingResources {
     public static void main(String[] args) {
         String path = ScannerUtil.read("Please enter the path of the file to open:");
         File file = new File(path);
-		openReadAndCloseFile(file);
+        openReadAndCloseFile1(file);
     }
 
-    private static void openReadAndCloseFile(File file) {
+    private static void openReadAndCloseFile1(File file) {
         InputStream in = null;
         try {
             in = new FileInputStream(file);
@@ -39,7 +39,7 @@ public class ClosingResources {
             System.out.println("Problem with opening the file: " + file);
             System.out.println("Message: " + e.getMessage());
             e.printStackTrace();
-            if(in != null) {
+            if (in != null) {
                 try {
                     in.close();
                 } catch (IOException ex) {
@@ -54,10 +54,49 @@ public class ClosingResources {
             System.out.println("Problem with the file: " + file);
             System.out.println("Message: " + e.getMessage());
             e.printStackTrace();
-            if(in != null) {
+            if (in != null) {
                 try {
                     in.close();
                 } catch (IOException ex) {
+                    System.out.println("IOException");
+                    System.out.println("Problem with closing the file: " + file);
+                    System.out.println("Message: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private static void openReadAndCloseFile2(File file) {
+        InputStream in = null;
+        try {
+            in = new FileInputStream(file);
+            System.out.println("File opened!");
+            int availableByteCount = in.available();
+            System.out.println("Available byte count to read: " + availableByteCount);
+
+            int c;
+            while ((c = in.read()) != -1) {
+                System.out.print((char) c);
+            }
+
+            in.close();
+            System.out.println("\nFile closed!");
+        } catch (FileNotFoundException e) {
+            System.out.println("FileNotFoundException");
+            System.out.println("Problem with opening the file: " + file);
+            System.out.println("Message: " + e.getMessage());
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("\nIOException");
+            System.out.println("Problem with the file: " + file);
+            System.out.println("Message: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException e) {
                     System.out.println("IOException");
                     System.out.println("Problem with closing the file: " + file);
                     System.out.println("Message: " + e.getMessage());
